@@ -1,0 +1,22 @@
+{
+  "API Documentation": {
+    "url": "http://localhost:8000",
+    "/images/{filename}": {
+      "method": "GET",
+      "description": "Returns requested image from the server if it exists.",
+      "parameters": {
+        "filename": "Name of the file to get (with extension)"
+      }
+    },
+    "/parse-url": {
+      "method": "POST",
+      "description": "Gets any valid url, parses it and provides a human-readable information about it in JSON format.",
+      "request": "JSON with key named 'url' and value as url you want to parse (e.g {'url': 'https://youtu.be/mypath/deeper?param1=xxx&param2=qqq'}"
+    },
+    "/file-info": {
+      "method": "POST",
+      "description": "Returns metadata about the file in the JSON format (length of whole text, amount of alphanumeric symbols, and number of occurrences of that string in the text)",
+      "request": "Form-data with keys 'file'(value is uploaded file) and 'string_to_find'(value is string to find in the text)"
+    }
+  }
+}
